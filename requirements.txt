@@ -1,3 +1,4 @@
+--upgrade pip
 streamlit
 streamlit_chat
 langchain
