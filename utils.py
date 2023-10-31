@@ -4,7 +4,7 @@ import openai
 import streamlit as st
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 PINE_API_KEY = st.secrets["PINE_API_KEY"]
-openai.api_key = API_KEY
+openai.api_key = OPENAI_API_KEY
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
