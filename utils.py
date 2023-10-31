@@ -2,12 +2,11 @@ from sentence_transformers import SentenceTransformer
 import pinecone
 import openai
 import streamlit as st
-API_KEY = st.secrets["OPENAI_API_KEY"]
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 PINE_API_KEY = st.secrets["PINE_API_KEY"]
 openai.api_key = API_KEY
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
 
 pinecone.init(api_key=PINE_API_KEY, environment="gcp-starter")
 index = pinecone.Index('genrativebotdb')
