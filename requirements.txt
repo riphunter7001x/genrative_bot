@@ -3,4 +3,8 @@ streamlit_chat
 langchain
 sentence_transformers
 openai
+<<<<<<< HEAD
 pinecone-client==2.2.4
+=======
+pinecone-client==2.2.4
+>>>>>>> refs/remotes/origin/main
