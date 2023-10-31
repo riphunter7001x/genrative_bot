@@ -2,12 +2,14 @@ from sentence_transformers import SentenceTransformer
 import pinecone
 import openai
 import streamlit as st
-openai.api_key = "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"
+API_KEY = st.secrets["OPENAI_API_KEY"]
+PINE_API_KEY = st.secrets["PINE_API_KEY"]
+openai.api_key = API_KEY
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-pinecone.init(api_key='8b49efd8-d769-4a5f-a7b5-aec8f754fa8a', environment="gcp-starter")
+pinecone.init(api_key=PINE_API_KEY, environment="gcp-starter")
 index = pinecone.Index('genrativebotdb')
 
 def find_match(input):

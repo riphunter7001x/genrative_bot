@@ -10,6 +10,7 @@ from langchain.prompts import (
 import streamlit as st
 from streamlit_chat import message
 from utils import *
+API_KEY = st.secrets["OPENAI_API_KEY"]
 
 st.subheader("Genrative Bot for Customer Support")
 
@@ -19,7 +20,7 @@ if 'responses' not in st.session_state:
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=API_KEY)
 
 if 'buffer_memory' not in st.session_state:
             st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
