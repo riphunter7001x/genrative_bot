@@ -12,7 +12,7 @@ from streamlit_chat import message
 from utils import *
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
-st.subheader("Genrative Bot for Customer Support")
+st.subheader("AI-Powered Banking Assistant: Enhancing Customer Support with LLM”")
 
 if 'responses' not in st.session_state:
     st.session_state['responses'] = ["How can I assist you?"]
